@@ -1,0 +1,19 @@
+{
+  "name": "twilio-whatsapp-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/therealtimhawkins/twilio-whatsapp-service.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/therealtimhawkins/twilio-whatsapp-service/issues"
+  },
+  "homepage": "https://github.com/therealtimhawkins/twilio-whatsapp-service#readme"
+}
