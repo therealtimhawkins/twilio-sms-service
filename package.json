@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/therealtimhawkins/twilio-whatsapp-service/issues"
   },
-  "homepage": "https://github.com/therealtimhawkins/twilio-whatsapp-service#readme"
+  "homepage": "https://github.com/therealtimhawkins/twilio-whatsapp-service#readme",
+  "dependencies": {
+    "twilio": "^3.30.1"
+  }
 }
