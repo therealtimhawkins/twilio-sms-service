@@ -1,15 +1,18 @@
-const accountSid = process.env.TWILIO_SID;
-const authToken = process.env.TWILIO_AUTH;
-const client = require('twilio')(accountSid, authToken);
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 3000;
+const smsRouter = require('./src/routers/smsRouter');
 
-const sendMessage = (message, number) => {
-  client.messages
-    .create({
-      from: `+447480802881`,
-      body: message,
-      to: number
-    })
-    .then(message => console.log(message));
-};
+app.use('/sms', smsRouter);
 
-sendMessage('TEST MESSAGE', '+447930761693');
+// Handle Errors
+app.use((error, _, res, next) => {
+  console.log(error);
+  res.status(error.status || 500).json({ message: error.message });
+  next();
+});
+
+app.listen(port, () => {
+  console.log(`Listening on port ${port}...`);
+});
+

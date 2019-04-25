@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/therealtimhawkins/twilio-whatsapp-service#readme",
   "dependencies": {
+    "express": "^4.16.4",
+    "nodemon": "^1.18.11",
     "twilio": "^3.30.1"
   }
 }
