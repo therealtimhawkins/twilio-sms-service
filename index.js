@@ -5,7 +5,6 @@ const smsRouter = require('./src/routers/smsRouter');
 
 app.use('/sms', smsRouter);
 
-// Handle Errors
 app.use((error, _, res, next) => {
   console.log(error);
   res.status(error.status || 500).json({ message: error.message });
