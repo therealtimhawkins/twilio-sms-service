@@ -8,6 +8,14 @@ const sendSmsMessage = (message, number, twilioClient) => {
     twilioClient = client;
   };
 
+  if (typeof message != 'string') {
+    return Error('Message must be a string.');
+  };
+
+  if (typeof number != 'string') {
+    return Error('Number must be a string.');
+  };
+
   return twilioClient.messages
     .create({
       from: twilioNumber,
