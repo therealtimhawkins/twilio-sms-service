@@ -3,8 +3,12 @@ const authToken = process.env.TWILIO_AUTH;
 const twilioNumber = process.env.TWILIO_NUMBER;
 const client = require('twilio')(accountSid, authToken);
 
-const sendSmsMessage = (message, number) => {
-  return client.messages
+const sendSmsMessage = (message, number, twilioClient) => {
+  if (!twilioClient) {
+    twilioClient = client;
+  };
+
+  return twilioClient.messages
     .create({
       from: twilioNumber,
       body: message,
